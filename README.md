@@ -1,77 +1,47 @@
-# 🧠 MotoSync IA – Classificação Inteligente de Pátios
+# 🧠 MotoSync IA – Classificação de Pátios com Machine Learning
 
-Este projeto aplica técnicas de Machine Learning para classificar pátios operacionais com base em seu comportamento diário. Com dados simulados, foram analisadas variáveis como movimentações de motos, ocupação média e tempo de uso das vagas, a fim de prever se um pátio é de **alta rotatividade**, **baixa utilização** ou um **gargalo logístico**.
-
----
-
-## 📈 Objetivo
-
-Desenvolver um modelo preditivo que classifique os pátios com base em dados operacionais, auxiliando na tomada de decisões logísticas da Mottu por meio de inteligência artificial aplicada.
+Projeto acadêmico desenvolvido para aplicar técnicas de Inteligência Artificial no contexto do sistema **MotoSync**, voltado à gestão logística de motos nos pátios da empresa Mottu.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## ❗ Problema
 
-- Python 3.11+
-- Pandas
-- Seaborn
-- Matplotlib
-- Plotly
-- Scikit-learn
+Atualmente, a organização dos pátios de motos da Mottu enfrenta desafios relacionados à desorganização, tempo de resposta operacional e falta de previsibilidade. Pátios sobrecarregados, outros subutilizados e a ausência de um controle analítico dificultam decisões estratégicas.
 
----
+Para auxiliar nesse cenário, propusemos um modelo de **aprendizado de máquina** capaz de **classificar automaticamente os pátios** em três categorias:
 
-## 🔍 Principais Etapas
+- `alta_rotatividade`
+- `baixa_utilizacao`
+- `gargalo`
 
-- Análise exploratória dos dados com gráficos visuais
-- Reclassificação lógica dos pátios com base em regras operacionais
-- Normalização dos dados numéricos
-- Treinamento de modelo Random Forest
-- Avaliação com métricas como acurácia, precisão e matriz de confusão
+Essas classificações ajudam a entender o comportamento de cada pátio com base em dados como movimentações diárias, ocupação média e tempo médio de uso das vagas.
 
 ---
 
-## 📊 Resultados
+## ⚙️ Frameworks, Técnicas e Algoritmos Utilizados
 
-O modelo treinado atingiu uma acurácia de aproximadamente **XX,XX%**, demonstrando boa capacidade de prever corretamente o tipo de pátio com base nas variáveis analisadas.
+### 📦 **Pandas**
+Utilizado para carregamento, limpeza e manipulação dos dados tabulares simulados.
 
----
+### 📊 **Seaborn, Matplotlib e Plotly**
+Três bibliotecas de visualização utilizadas para análise exploratória, geração de gráficos estatísticos, mapa de calor de correlações e distribuição de variáveis.
 
-## 📁 Estrutura do Projeto
+### 🤖 **Scikit-learn**
+Utilizado para todas as etapas de aprendizado de máquina:
+- **Pré-processamento:** normalização com `StandardScaler`
+- **Modelagem:** `RandomForestClassifier`
+- **Avaliação:** `accuracy_score`, `classification_report` e `confusion_matrix`
 
-├── data/ # Arquivos CSV simulados
-├── images/ # Gráficos gerados (barras, boxplots, heatmaps)
-├── notebook/ # Notebook do Google Colab com todo o processo
-├── README.md # Documentação principal
-
----
-
-## 🧠 Lógica de Classificação dos Pátios
-
-Os pátios foram rotulados com base em regras simples:
-
-- **Alta Rotatividade**: muitas movimentações e pouco tempo de ocupação
-- **Gargalo**: ocupação muito alta e tempo longo de permanência
-- **Baixa Utilização**: uso baixo ou instável
+### ✅ **Justificativa da Escolha do Modelo**
+O **Random Forest** foi escolhido por sua robustez, boa performance em problemas com variáveis tabulares e facilidade de interpretação. Além disso, é menos sensível à escala dos dados e lida bem com features correlacionadas.
 
 ---
 
-## 👥 Integrantes
+## 🧱 Arquitetura Desenvolvida
 
-- Thiago Mendes – RM 555352  
-- Guilherme Gonçalves – RM 558475  
-- Vinicius Banciela – RM 558117  
+A estrutura do projeto segue um fluxo típico de aprendizado supervisionado:
 
----
 
-## 🚀 Próximos Passos
-
-- Substituir os dados simulados por dados reais dos sensores RFID e LoRa
-- Integrar o modelo a um painel analítico ou API para uso interno
-- Testar outros algoritmos como XGBoost, SVM e KNN
-- Aplicar aprendizado contínuo (online learning) com base no uso real dos pátios
-
----
 
 ## 📌 Observações
 
